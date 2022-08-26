@@ -39,7 +39,7 @@ async def test_when_calculate_electricity_consumption_uses_real_data_then_calcul
 
   # Assert
   assert consumption != None
-  assert round(consumption["total"], 2) == 8.11
+  assert round(consumption["total"], 2) == 10.07
   assert consumption["last_calculated_timestamp"] == consumption_data[-1]["interval_end"]
 
   assert len(consumption["consumptions"]) == 48

@@ -41,8 +41,8 @@ async def test_when_calculate_gas_consumption_uses_real_data_then_calculation_re
   assert consumption != None
   assert consumption["last_calculated_timestamp"] == consumption_data[-1]["interval_end"]
   
-  assert consumption["total_kwh"] == 63.86
-  assert consumption["total_m3"] == 5.62
+  assert consumption["total_kwh"] == 118.843
+  assert consumption["total_m3"] == 10.459
 
   assert len(consumption["consumptions"]) == len(consumption_data)
 

@@ -54,8 +54,8 @@ async def test_when_calculate_electricity_cost_uses_real_data_then_calculation_r
   # Assert
   assert consumption_cost != None
   assert consumption_cost["standing_charge"] == standard_charge_result["value_inc_vat"]
-  assert consumption_cost["total_without_standing_charge"] == 1.63
-  assert consumption_cost["total"] == 1.87
+  assert consumption_cost["total_without_standing_charge"] == 2.02
+  assert consumption_cost["total"] == 2.26
   assert consumption_cost["last_calculated_timestamp"] == consumption_data[-1]["interval_end"]
 
   assert len(consumption_cost["charges"]) == 48
