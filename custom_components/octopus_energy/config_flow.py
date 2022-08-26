@@ -231,7 +231,7 @@ class OptionsFlowHandler(OptionsFlow):
       is_smets1 = False
       if CONFIG_SMETS1 in config:
         is_smets1 = config[CONFIG_SMETS1]
-      
+
       return self.async_show_form(
         step_id="user", data_schema=vol.Schema({
           vol.Required(CONFIG_MAIN_API_KEY, default=config[CONFIG_MAIN_API_KEY]): str,
