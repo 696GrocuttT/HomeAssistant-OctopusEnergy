@@ -2,4 +2,8 @@ pytest
 pytest-socket
 pytest-asyncio
 mock
-homeassistant>=2021.12.01
+homeassistant
+psutil-home-assistant
+sqlalchemy
+fnvhash
+fnv_hash_fast

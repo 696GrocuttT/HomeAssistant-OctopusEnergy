@@ -46,7 +46,9 @@ jobs:
   release:
     name: Release
     if: github.ref == 'refs/heads/main'
-    needs: test
+    needs: 
+    - validate
+    - test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -60,6 +62,7 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_BODY_APPENDIX: "---\nEnjoying the integration? Why not make a one time or monthly [GitHub sponsorship](https://github.com/sponsors/bottlecapdave) or use my [Octopus Energy referral link](https://share.octopus.energy/gray-jade-372)?"
         run: npm run release
       - name: Merge main into develop
         uses: devmasx/merge-branch@master
